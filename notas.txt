@@ -1,0 +1,6 @@
+VARIABLE
+Es un contenedor de información que apunta a un lugar en memoria.
+Dicha información puede cambiar en el futuro
+
+POLYFILL
+Código que provee el funcionamiento de una nueva característica de JS (Ecmascript 6), en versiones viejas como ES5
