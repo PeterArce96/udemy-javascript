@@ -18,10 +18,39 @@
 // let x = a + b; 
 
 // Otra forma de crear varia variables, con comas
+// let a = 10, 
+//     b = 20, 
+//     c = 30, 
+//     d = 40, 
+//     x = a + b;
+
+// tipos de mensajes de consola
+// console.log(x);
+// console.warn(x)
+// console.error(x)
+
+// console es el Objeto y .log es el método 
+// console.log( 'a', a);
+// console.log( 'b', b);
+// console.log( 'c', c);
+
+// Las llaves "{}" significa que ahora son objetos
+// %c para incrustar un estilo
+// console.log('%c Mis variables', 'color:blue; font-weight: bold' );
+// console.log({a})
+// console.log({b})
+// console.log({c})
+
+// Vamos a cambiar los valores de las variables
 let a = 10, 
     b = 20, 
-    c = 10, 
-    d = 10, 
+    c = 'Hola ', 
+    d = 'Spiderman', 
     x = a + b;
 
-console.log(a + b)
+// consoles.table(), crea una tabla para lo que se desea imprimir en consola
+// console.table({a,b,c,d,x})
+
+// El operador "+" va concatenar los valores de c y d porque los 2 son strings. van a aparecer juntos, por lo que es mejor colocarle un espacio al final al valor de C
+const saludo = c + d;
+console.log(saludo)
