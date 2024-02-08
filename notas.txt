@@ -4,3 +4,7 @@ Dicha información puede cambiar en el futuro
 
 POLYFILL
 Código que provee el funcionamiento de una nueva característica de JS (Ecmascript 6), en versiones viejas como ES5
+
+BREAKPOINT
+Seleccionar la línea donde se quiere empezar el breakpoint activando el punto rojo al lado del número de la línea.
+Luego ir al menú de visual studio, luego "ejecutar" y luego "iniciar depuración", aquí se debe seleccionar node.js en "abrir configuraciones"

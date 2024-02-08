@@ -36,10 +36,11 @@
 
 // Las llaves "{}" significa que ahora son objetos
 // %c para incrustar un estilo
-// console.log('%c Mis variables', 'color:blue; font-weight: bold' );
-// console.log({a})
-// console.log({b})
-// console.log({c})
+console.log('%c Mis variables', 'color:blue; font-weight: bold' );
+console.log({a})
+console.log({b})
+console.log({c})
+console.table({a,b,c,d,x})
 
 // Vamos a cambiar los valores de las variables
 let a = 10, 
@@ -49,8 +50,10 @@ let a = 10,
     x = a + b;
 
 // consoles.table(), crea una tabla para lo que se desea imprimir en consola
-// console.table({a,b,c,d,x})
+
 
 // El operador "+" va concatenar los valores de c y d porque los 2 son strings. van a aparecer juntos, por lo que es mejor colocarle un espacio al final al valor de C
 const saludo = c + d;
-console.log(saludo)
+// console.log(saludo)
+
+c = 'Hola de nuevo';
