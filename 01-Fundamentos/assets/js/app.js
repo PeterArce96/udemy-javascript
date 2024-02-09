@@ -1,5 +1,8 @@
 // console.log('Hola Mundo');
 
+// alert("Hola") -->Capitulo, Orden y lugar de importaciones
+
+
 // Creando una variable llamada "a" al cuál se le asigan un valor de 10;
 // let a = 10;
 // var b = 10;
@@ -36,11 +39,11 @@
 
 // Las llaves "{}" significa que ahora son objetos
 // %c para incrustar un estilo
-console.log('%c Mis variables', 'color:blue; font-weight: bold' );
-console.log({a})
-console.log({b})
-console.log({c})
-console.table({a,b,c,d,x})
+// console.log('%c Mis variables', 'color:blue; font-weight: bold' );
+// console.log({a})
+// console.log({b})
+// console.log({c})
+// console.table({a,b,c,d,x})
 
 // Vamos a cambiar los valores de las variables
 let a = 10, 
@@ -57,3 +60,6 @@ const saludo = c + d;
 // console.log(saludo)
 
 c = 'Hola de nuevo';
+
+// Si creamos una variable con VAR, lo coloca en un objeto global llamado WINDOW y lo podemos llamar desde otro archivo JS, pero no es buena práctica
+var miNombre = 'Fernando';
