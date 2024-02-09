@@ -3,6 +3,7 @@
 // alert("Hola") -->Capitulo, Orden y lugar de importaciones
 
 
+
 // Creando una variable llamada "a" al cuál se le asigan un valor de 10;
 // let a = 10;
 // var b = 10;
@@ -62,4 +63,12 @@ const saludo = c + d;
 c = 'Hola de nuevo';
 
 // Si creamos una variable con VAR, lo coloca en un objeto global llamado WINDOW y lo podemos llamar desde otro archivo JS, pero no es buena práctica
-var miNombre = 'Fernando';
+// var miNombre = 'Fernando';
+
+console.log(miNuevoNombre);
+
+// var miNuevoNombre = "Fernando Herrera"
+// Si creamos la variable con var y lo mandamos a imprimir antes de la inicialización, este dará undefined porque el js se lee línea por línea y en ese momento todavía no estaba definido.
+
+let miNuevoNombre = "Fernando Herrera";
+// Si lo creamos con let, nos salta un error que dice que no podemos acceder a la variable antes de su inicialización

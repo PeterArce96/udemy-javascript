@@ -8,3 +8,10 @@ Código que provee el funcionamiento de una nueva característica de JS (Ecmascr
 BREAKPOINT
 Seleccionar la línea donde se quiere empezar el breakpoint activando el punto rojo al lado del número de la línea.
 Luego ir al menú de visual studio, luego "ejecutar" y luego "iniciar depuración", aquí se debe seleccionar node.js en "abrir configuraciones"
+
+
+window.outerWidth
+Brinda el valor del ancho de la pantalla del documento
+
+window.outerHeight
+Brinda el valor del alto de la pantalla del documento
