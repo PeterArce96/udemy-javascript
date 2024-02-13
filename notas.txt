@@ -15,3 +15,16 @@ Brinda el valor del ancho de la pantalla del documento
 
 window.outerHeight
 Brinda el valor del alto de la pantalla del documento
+
+TIPOS DE DATO DE UNA VARIABLE
+JS ES UN LENGUAJE DÉBILMENTE TIPADO, NO LE DECIMOS A JS QUE ESTA VARIABLE VA TENER STRING, NUMBER. EL LENGUAJE LO INFIERE.
+
+PRIMITIVOS
+Es una información que no es un objeto y son inmutables.
+
+-Boolean --> true / false
+-Null --> Sin valor en lo absoluto
+-Undefined --> Una variable declarada que aún no se le asigna un valor
+-Number --> integers, floats, etc
+-String --> Cadena de caracteres, Ej: Palabras, nombres de personas
+-Symbol --> Es un valor úniuco que no es igual a ningún otro valor
