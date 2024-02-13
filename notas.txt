@@ -28,3 +28,6 @@ Es una información que no es un objeto y son inmutables.
 -Number --> integers, floats, etc
 -String --> Cadena de caracteres, Ej: Palabras, nombres de personas
 -Symbol --> Es un valor úniuco que no es igual a ningún otro valor
+
+PALABRAS RESERVADAS
+Son palabras que tienen un uso específico, solo se deben de usar para lo que fueron creadas.
