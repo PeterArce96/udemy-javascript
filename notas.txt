@@ -19,6 +19,10 @@ Brinda el valor del alto de la pantalla del documento
 TIPOS DE DATO DE UNA VARIABLE
 JS ES UN LENGUAJE DÉBILMENTE TIPADO, NO LE DECIMOS A JS QUE ESTA VARIABLE VA TENER STRING, NUMBER. EL LENGUAJE LO INFIERE.
 
+TIPOS DE DATOS DE JS
+PRIMITIVOS
+OBJETOS
+
 PRIMITIVOS
 Es una información que no es un objeto y son inmutables.
 
