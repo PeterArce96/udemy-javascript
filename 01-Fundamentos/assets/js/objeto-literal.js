@@ -1,8 +1,8 @@
 // OBJETOS {}
-// son objetos que tienen pares y valores
+// son objetos que tienen PROPIEDADES, a su vez estas contienen pares y valores
 // nombre es la LLAVE
 // 'Tony Stark' es el VALOR de la llave
-let personaje = {
+const personaje = {
     nombre: 'Tony Stark',
     codeName: 'Ironman',
     vivo: false,
@@ -38,3 +38,43 @@ console.log('Vivo', personaje[x]);
 
 // Imprimir la última película
 console.log('Última película', personaje['ultima-pelicula']);
+
+// Más DETALLES
+// Borrar una propiedad
+delete personaje.edad;
+console.log(personaje);
+
+// Crear una nueva propiedad en el Objeto
+personaje.casado = true;
+
+// Trabajar el OBJETO como un ARREGLO
+// Cada arreglo tienen 2 valores (llave y Valor)
+const entriesPares = Object.entries(personaje);
+console.log(entriesPares);
+
+// Aunque cambiemos de let a CONST el OBJETO, las propiedades pueden ser mutables.
+// Lo que no se nos permite es darle otro valor a la propiedad
+// personaje = 123;
+
+// console.log(personaje)
+
+// Object.freeze() --> Bloqueo de modificaciones a las Propiedades DIRECTAS del objeto
+Object.freeze(personaje);
+
+personaje.dinero = 1000000000; //intentamos crear una nueva propiedad
+personaje.casado = false;
+
+console.log(personaje); //No aparece la nueva propiedad del objeto porque está congelado y tampoco se modifican las propiedades que ya estaban declaradas en el objeto.
+
+// Sin embargo, si podemos cambiar las propiedades no directas al objeto, o sea que están adentro del VALOR
+personaje.direccion.ubicacion = 'Costa Rica'
+
+
+// LISTADO de todas las PROPIEDADES del objeto en forma de ARREGLO
+const propiedades = Object.getOwnPropertyNames(personaje);
+
+
+// LISTADO de todos los VALORES del objeto en forma de ARREGLO
+const valores = Object.values(personaje);
+
+console.log({propiedades, valores})
