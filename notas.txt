@@ -43,6 +43,7 @@ Empiezan en la posición 0
 
 FUNCIONES
 Centralizar la lógica de un procedimiento que se puede reutilizar varias veces.
+Si las funciones no tienen el "return" explícito, no retorna nada, retorna un Undefined
 
 MÉTODO
 Función que se encuentra dentro de un objeto
