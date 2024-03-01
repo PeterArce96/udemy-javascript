@@ -37,3 +37,40 @@ if ( dia === 4 ){
 }else {
     console.log('No es Lunes, Martes ni Domingo')
 }
+
+// Sin usar IF Else, o Switch, únicamente objetos
+
+
+// Con Objetos
+const diaSemana = {
+    0: "Domingo",
+    1: "Lunes",
+    2: "Martes",
+    3: "Miércoles",
+    4: "Jueves",
+    5: "Viernes",
+    6: "Sábado",
+
+}
+
+// día de la semana
+console.log('Día: ', diaSemana[0] || 'Día no definido');
+//Ponemos el || que significa 'o', para cuando pongan un número de día que no es del 0 al 7, por ejemplo 10
+
+// Para hacer procedimiento podemos ponerle funciones a las propiedades del objeto.
+const diaSemana2 = {
+    0: () => "Domingo - 0",
+    1: () => "Lunes - 1",
+    2: () => "Martes - 2",
+    3: () => "Miércoles - 3",
+    4: () => "Jueves - 4",
+    5: () => "Viernes - 5",
+    6: () => "Sábado - 6",
+
+}
+console.log(diaSemana2[3]()) //ejecutar la función con ()
+
+// Con Arreglos
+const diaLetras = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
+
+console.log('Día: ', diaLetras[dia] || 'Día no definido');
