@@ -47,3 +47,36 @@ console.log(regresaFalse() || regresaTrue());
 // Aquí si pasa por la segunda condición porque si el primero es falso, sigue evaluando lo demás por si encuentra un 'true'
 
 console.log('4 Condiciones ', true || true || true || false) //true
+
+
+// ASIGNACIONES CON OPERADORES
+console.warn('Asignaciones');
+
+const soyUndefined = undefined;
+const soyNull = null;
+const soyFalso = false;
+
+const a1 = false && 'Hola Mundo' && 150;
+console.log({a1, }) // js asigna a la variable el último valor, pero si colocamos de primer valor 'false', no va evaluar nada porque no va seguir ejecutando lo demás y el resultado sería 'false'
+
+// const a2 = 'Hola' && 'Mundo';
+// console.log({a1, a2,  }) //Mundo
+
+const a2 = 'Hola' && 'Mundo' && soyFalso;
+console.log({a1, a2,  }) //false, porque con && todos tienen que ser verdadero para que sea 'true'
+
+const a3 = soyFalso || 'Ya no soy falso';
+console.log({a1, a2, a3, }); //Ya no soy falso, porque el primer valor es falso, por lo que sigue evaluando las demás condiciones.
+
+const a4 = soyFalso || soyUndefined || soyNull || 'Ya no soy falso de nuevo' || true;
+console.log({a1, a2, a3, a4, }); //Ya no soy falso de nuevo, porque el primero valor es 'false' por lo que sigue evaluando, el segundo y tercero son valores, por lo que sigue evaluando, el cuarto valor es 'true' lo demás ya no se ejecuta,
+
+const a5 = soyFalso || soyUndefined || regresaTrue() || 'Ya no soy falso de nuevo' || true;
+console.log({a1, a2, a3, a4, a5, }); //true, porque la función regresaTrue() es 'true' por lo que no sigue ejecutando lo demás
+
+if(regresaFalse() && regresaTrue && (true || false || true)) {
+    console.log('Hacer algo');
+}else {
+    console.log('Hacer otra cosa');
+}
+// NO deberíamos tener más de 3 condiciones, si tenemos más tendríamos que simplificarlo
