@@ -50,9 +50,37 @@ const pedirCarta = () => {
 
     console.log(deck)
     console.log(carta)
-    return ;
+    return carta;
 }
 
 // deck = []; // para que lea el mensaje (throw) cuando ya no haya cartas
 
-pedirCarta();
+// pedirCarta();
+
+const valorCarta = (carta) => {
+    // Los strings se pueden trabajar como arreglos, el primer dígito de la carta es la posición 0
+    // substring() --> extrae caracteres desde un indiceA hasta un indiceB sin incluirlo.
+    const valor = carta.substring(0, carta.length - 1);
+    return (isNaN(valor)) ?
+            (valor === 'A') ? 11 : 10
+            : valor * 1;
+
+    // console.log({valor});
+    // let puntos = 0;
+
+    // isNaN() --> evalua si lo que está dentro del paréntesis es un número o no
+    // if( isNaN( valor ) ){
+        
+    //     puntos =    valor === 'J' ? 11 :
+    //                 valor === 'Q' ? 12 :
+    //                 valor === 'K' ? 13 : 14;
+
+    // }else {
+    //     puntos = valor * 1; //convertirlo de string a number
+    // }
+
+    // console.log(puntos)
+}
+
+const valor = valorCarta(pedirCarta());
+console.log(valor)
