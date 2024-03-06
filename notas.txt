@@ -47,3 +47,7 @@ Si las funciones no tienen el "return" explícito, no retorna nada, retorna un U
 
 MÉTODO
 Función que se encuentra dentro de un objeto
+
+CDN
+Content Delivery Network
+un host de contenido que habilita la forma de usar la librería de manera externa, en línea.
