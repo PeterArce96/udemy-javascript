@@ -10,6 +10,7 @@ let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const especiales = ['A', 'J', 'Q', 'K']
 
+// Función que crea una nueva baraja
 const crearDeck = () => {
 
     for ( let i = 2; i <= 10; i++){
@@ -25,7 +26,7 @@ const crearDeck = () => {
         }
     }
 
-    console.log(deck);
+    // console.log(deck);
 
     // Ordenar la baraja de forma aleatoria, con el método shuffle de Undercore.js
     deck = _.shuffle(deck);
@@ -36,3 +37,22 @@ const crearDeck = () => {
 }
 
 crearDeck();
+
+// Función que permite tomar una carta
+const pedirCarta = () => {
+
+    if (deck.length === 0){
+        throw 'No hay cartas en el deck';
+    }
+
+    // remueve el último elemento del arreglo y lo regresa
+    const carta = deck.pop(); 
+
+    console.log(deck)
+    console.log(carta)
+    return ;
+}
+
+// deck = []; // para que lea el mensaje (throw) cuando ya no haya cartas
+
+pedirCarta();
