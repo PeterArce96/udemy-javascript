@@ -10,6 +10,15 @@ let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const especiales = ['A', 'J', 'Q', 'K']
 
+let puntosJugador = 0;
+let puntosComputadora = 0;
+
+// Referencias del HTML
+const btnPedir = document.querySelector('#btnPedir');
+console.log(btnPedir)
+
+const puntosHTML = document.querySelectorAll('small');
+
 // Función que crea una nueva baraja
 const crearDeck = () => {
 
@@ -48,8 +57,8 @@ const pedirCarta = () => {
     // remueve el último elemento del arreglo y lo regresa
     const carta = deck.pop(); 
 
-    console.log(deck)
-    console.log(carta)
+    // console.log(deck)
+    // console.log(carta)
     return carta;
 }
 
@@ -82,5 +91,23 @@ const valorCarta = (carta) => {
     // console.log(puntos)
 }
 
-const valor = valorCarta(pedirCarta());
-console.log(valor)
+// const valor = valorCarta(pedirCarta());
+// console.log(valor)
+
+// EVENTOS
+// Aquí necesitamos escuchar cuando se haga clic en el botón de Pedir Carta, por eso que creamos un evento para eese botón con addEventListener(el primer argumento es el evento que deseas escuchar, el segundo argumento es la función que se debe realizar al hacer click)
+// La función dentro del evento se llama CALLBACK, es una función que hace de argumento a otra función
+btnPedir.addEventListener('click', () => {
+    // console.log('click')
+    const carta = pedirCarta();
+    // console.log(carta)
+
+    // suma de puntos de cada carta pedida
+    puntosJugador = puntosJugador + valorCarta(carta);
+
+    // colocar la suma de puntos en el small del html, para verificar los puntos del jugador, como creamos la variable global puntosHTML con querySelectorAll, necesitamos obtener solo el primero, por lo que es el índice 0
+    puntosHTML[0].innerText = puntosJugador;
+
+
+    // console.log(puntosJugador);
+});
