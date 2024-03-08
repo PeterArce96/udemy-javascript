@@ -96,3 +96,37 @@ Es mejor crear una variable para cada llamado de un elemento en el DOM, porque s
 const titulo = document.querySelector('.titulo');
 
 titulo.innerText = 'Hola Mundo';
+
+CREAR UN ELEMENTO HTML EN EL DOM
+document.createElement('button');
+Pide un elemento html, en este caso un botón.
+
+Ejemplo:
+CREAMOS la variable divBotones
+const divBotones = querySelector('#divBotones');
+
+CREAMOS un nuevo elemento HTML, en este caso botón nuevo para agregarlo al div que contiene los demás botones.
+const botonNuevo = document.createElement('button');
+
+Y lo AGREGAMOS al div con 'append()'
+divBotones.append(botonNuevo);
+
+luego le MODIFICAMOS el texto
+botonNuevo.innerText = 'Destruir el mundo';
+
+Le agregamos CLASES al boton con 'classList.add()'
+botonNuevo.classList.add('btn');
+botonNuevo.classList.add('btn-success');
+
+--------------------
+tambien cuando creamos un nuevo elemento podemos utilizar todas sus propiedades, por ejemplo creamos un input
+const input = document.createElement('input');
+
+lo agregamos al final del body
+document.body.append(input);
+
+le agregamos una clase del bootstrap
+input.classList.add('form-control');
+
+Podemos utilizar su propiedad "placeholder"
+input.placeholder = 'Hola Mundo'.
