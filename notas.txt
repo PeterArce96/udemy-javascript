@@ -51,3 +51,48 @@ Función que se encuentra dentro de un objeto
 CDN
 Content Delivery Network
 un host de contenido que habilita la forma de usar la librería de manera externa, en línea.
+
+DOM
+Document Object Model
+Conjunto de objetos anidados para crear un documento HTML o tambien al xml, La idea es tener acceso dinámico a su través de programación a sus elementos y poder manipularlos.
+
+"document" en consola
+Hace referencia a toda la página HTML
+
+document.querySelector()
+Recupera el primer elemento que cumple con la condición que especificamos.
+
+document.querySelectorAll()
+Regresa todos los elementos que cumplen con la condición
+
+document.querySelector('small').innerText()
+innerText()
+Permite poner o cambiar el texto directamente en el elemento
+
+document.querySelector('small').innerHTML='<b>Hola Mundo </b>'
+innerHTML
+Permite cambiar el elemento HTML seleccionado.
+
+Formas de obtener un elemento por el DOM en JS
+document.querySelector('#computadora-cartas');
+Permite seleccionar el elemento con ese ID, se tiene que poner el simbolo que representa al ID '#'
+
+document.getElementById('computadora-cartas');
+Selecciona el elemento directamente por su ID
+
+Para llamar un elemento por su CLASE
+
+1.-RECOMENDABLE
+document.querySelectorAll('.carta');
+Llama a todos los elementos con esa clase 'carta'. Se le pone el simbolo de clase '.'. Devuelve un NodeList
+
+2.-
+document.queryElementsByClassName('carta');
+Llama a todos los elementos con esa clase 'carta'. No se colocar el '.'. Devuelve un HTMLCollection
+
+RECOMENDACIÓN
+Es mejor crear una variable para cada llamado de un elemento en el DOM, porque si no JS va tener que barrer el HTML cada vez que lo llamemos.
+
+const titulo = document.querySelector('.titulo');
+
+titulo.innerText = 'Hola Mundo';
