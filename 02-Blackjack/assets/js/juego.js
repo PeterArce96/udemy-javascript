@@ -17,6 +17,7 @@ let puntosComputadora = 0;
 const btnPedir = document.querySelector('#btnPedir');
 console.log(btnPedir)
 
+const divCartasJugador = document.querySelector('#jugador-cartas');
 const puntosHTML = document.querySelectorAll('small');
 
 // Función que crea una nueva baraja
@@ -108,6 +109,23 @@ btnPedir.addEventListener('click', () => {
     // colocar la suma de puntos en el small del html, para verificar los puntos del jugador, como creamos la variable global puntosHTML con querySelectorAll, necesitamos obtener solo el primero, por lo que es el índice 0
     puntosHTML[0].innerText = puntosJugador;
 
+
+    // tenemos que crear las cartas pedidas
+    // <img class="carta" src="assets/cartas/10C.png" alt="">
+    const imgCarta = document.createElement('img');
+    imgCarta.src = `assets/cartas/${carta}.png`;
+    imgCarta.classList.add('carta');
+
+    // insertamos la imgCarta en el HTML
+    divCartasJugador.append(imgCarta);
+
+    if(puntosJugador > 21){
+        console.warn('Lo siento mucho, perdiste');
+        btnPedir.disabled = true;
+    } else if( puntosJugador === 21){
+        console.warn('21, genial!');
+        btnPedir.disabled = true;
+    }
 
     // console.log(puntosJugador);
 });
