@@ -130,3 +130,7 @@ input.classList.add('form-control');
 
 Podemos utilizar su propiedad "placeholder"
 input.placeholder = 'Hola Mundo'.
+
+
+PATRÓN MÓDULO
+Patrón de diseño más común de JS, permite una encapsulación de nuestro código y su misma protección.
