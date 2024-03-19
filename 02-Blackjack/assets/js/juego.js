@@ -13,26 +13,39 @@
 
 (() => {
     'use strict' //Para que JS sea estricto al evaluar el código
+    // Primer paso de optimización, reducimos los tipos de variables, agregando la (,) al final de la inicialización de variables.
 
     let deck = [];
-    const tipos = ['C', 'D', 'H', 'S'];
-    const especiales = ['A', 'J', 'Q', 'K']
 
-    let puntosJugador = 0;
-    let puntosComputadora = 0;
+    const tipos = ['C', 'D', 'H', 'S'],
+        especiales = ['A', 'J', 'Q', 'K'];
+
+    // let puntosJugador = 0,
+    //     puntosComputadora = 0;
+    let puntosJugadores = [];
 
     // Referencias del HTML
-    const btnPedir = document.querySelector('#btnPedir');
-    const btnNuevo = document.querySelector('#btnNuevo')
-    const btnDetener = document.querySelector('#btnDetener');
+    const btnPedir = document.querySelector('#btnPedir'),
+        btnNuevo = document.querySelector('#btnNuevo'),
+        btnDetener = document.querySelector('#btnDetener');
 
-    const divCartasJugador = document.querySelector('#jugador-cartas');
-    const divCartasComputadora = document.querySelector('#computadora-cartas');
+    const divCartasJugador = document.querySelector     ('#jugador-cartas'),
+        divCartasComputadora = document.querySelector('#computadora-cartas'),
+        puntosHTML = document.querySelectorAll('small');
 
-    const puntosHTML = document.querySelectorAll('small');
+    // Esta función inicializa el juego
+    const inicializarJuego = (numJugadores = 2) => {
+        deck = crearDeck();
+        for (let i = 0; i < numJugadores; i++) {
+            puntosJugadores.push(0);
+        }
+        console.log(puntosJugadores);
+    }
 
     // Función que crea una nueva baraja
     const crearDeck = () => {
+        
+        deck = []; //reinicializando el deck
 
         for ( let i = 2; i <= 10; i++){
             for (let tipo of tipos) {
@@ -50,12 +63,12 @@
         // console.log(deck);
 
         // Ordenar la baraja de forma aleatoria, con el método shuffle de Undercore.js
-        deck = _.shuffle(deck);
+        // deck = _.shuffle(deck);
 
-        return deck;
+        return _.shuffle(deck);
     }
 
-    crearDeck();
+    
 
     // Función que permite tomar una carta
     const pedirCarta = () => {
@@ -65,11 +78,13 @@
         }
 
         // remueve el último elemento del arreglo y lo regresa
-        const carta = deck.pop(); 
+        // const carta = deck.pop(); 
 
         // console.log(deck)
         // console.log(carta)
-        return carta;
+        // return carta;
+
+        return deck.pop();
     }
 
     // deck = []; // para que lea el mensaje (throw) cuando ya no haya cartas
@@ -101,6 +116,10 @@
         // }
 
         // console.log(puntos)
+    }
+
+    const acumularPuntos = () => {
+
     }
 
     // TURNO DE LA COMPUTADORA
@@ -186,8 +205,12 @@
     });
 
     btnNuevo.addEventListener('click', () => {
-        deck = [];
-        deck = crearDeck();
+
+        console.clear();
+        inicializarJuego();
+
+        // deck = [];
+        // deck = crearDeck();
 
         puntosJugador = 0;
         puntosComputadora = 0;
