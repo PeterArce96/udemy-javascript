@@ -134,3 +134,6 @@ input.placeholder = 'Hola Mundo'.
 
 PATRÓN MÓDULO
 Patrón de diseño más común de JS, permite una encapsulación de nuestro código y su misma protección.
+
+CODE MINIFY
+Minificar el código de JS para que el archivo tenga un menor peso. También sirve para que no sea tan fácil de leer el código fuente.
