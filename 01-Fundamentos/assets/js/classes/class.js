@@ -3,6 +3,16 @@
 // Las clases tienen por defecto implementado el 'use strict'
 
 class Persona {
+    static _conteo = 0;
+    static get conteo () {
+        return Persona._conteo + ' instancias';
+    }
+
+    static mensaje() {
+        console.log(this.nombre);
+        console.log('Hola a todos, soy un método stático')
+    }
+
     // Propiedades, se aconseja ponerlas debajo de la apertura de la Clase
     nombre = '';
     codigo = '';
@@ -14,6 +24,8 @@ class Persona {
         this.nombre = nombre;
         this.codigo = codigo;
         this.frase = frase;
+
+        Persona._conteo++;
     }
 
     // Sets y Gets
@@ -42,12 +54,22 @@ class Persona {
 const spiderman = new Persona('Peter Parker', 'Spider', 'Soy tu amigable vecino Spiderman');
 const ironman = new Persona('Tony Stark', 'Ironman', 'Yo soy Ironman');
 
-console.log(ironman);
+
+// console.log(ironman);
 
 // ironman.quienSoy();
 spiderman.miFrase();
 
 spiderman.setComidaFavorita = 'El pie de cereza de la tía May';
 
-console.log(spiderman.getComidaFavorita)
-console.log(spiderman);
+// console.log(spiderman.getComidaFavorita)
+// console.log(spiderman);
+
+// Persona._conteo = 2;
+console.log('Conteo stático', Persona._conteo);
+console.log(Persona.conteo);
+Persona.mensaje();
+
+Persona.propiedadExterna = 'Hola Mundo';
+console.log(Persona.propiedadExterna)
+console.log(Persona)
